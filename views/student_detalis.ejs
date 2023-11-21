@@ -1,0 +1,64 @@
+<h1>....Mongo Db....</h1>
+
+<a href="/viewdetalis">View details</a>
+
+<form method="post" action="/Addstudentdetalis" enctype="multipart/form-data">
+    <table border="1">
+
+        <tr>
+            <td>Enter Name :-</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+
+        <tr>
+            <td>Enter Age :-</td>
+            <td><input type="text" name="age"></td>
+        </tr>
+
+        <tr>
+            <td>Select Gendar :-</td>
+            <td>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">female
+            </td>
+        </tr>
+
+        <tr>
+            <td>Select Hobby :-</td>
+            <td>
+                <input type="checkbox" name="hobby" value="reading">Reading
+                <input type="checkbox" name="hobby" value="singing">Singing
+                <input type="checkbox" name="hobby" value="coding">Coding
+            </td>
+        </tr>
+
+        <% var city = ['Surat','Navsari','Bharuch','Ahemdabad','Vadodra'] ;%>
+        <tr>
+            <td>Select City :-</td>
+            <td>
+                <select name="city">
+                    <option value="">--- Select city ---</option>
+                    <%  city.map((v)=>{ %>
+                        <option value="<%= v %>"><%= v %></option>
+                    <% })%>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Add Description :-</td>
+            <td><textarea name="message" ></textarea></td>
+        </tr>
+
+        <tr>
+            <td>Upload Images :-</td>
+            <td><input type="file" name="adminImages"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" name="submit" value="Add Record"></td>
+        </tr>
+
+    </table>
+</form>

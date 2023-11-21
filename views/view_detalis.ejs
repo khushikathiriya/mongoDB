@@ -1,0 +1,33 @@
+<a href="/">Student_detalis</a>
+
+<form method="post" action="/viewdetalis">
+    <table border="1">
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Genger</td>
+            <td>Hobby</td>
+            <td>City</td>
+            <td>Description</td>
+            <td>Images</td>
+            <td>Actions</td>
+        </tr>
+
+        <% for (var st of stdata) { %>
+        <tr>
+
+                <td><%= st.name %></td>
+                <td><%= st.age %></td>
+                <td><%= st.gender %></td>
+                <td><%= st.hobby %></td>
+                <td><%= st.city %></td>
+                <td><%= st.message %></td>
+                <td><img src="<%= st.adminImages %>" height="100px"></td>
+                <td><a href="/deleterecord/<%= st.id %>">Delete</a> ||
+                    <a href="/updaterecord/<%= st.id %>">Update</a>
+                </td>
+            </tr>
+            <% } %>
+
+    </table>
+</form>
